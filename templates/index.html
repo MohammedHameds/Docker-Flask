@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NBA Favorite Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            padding-top: 50px;
+            color: black; /* Default text color */
+        }
+        .container {
+            max-width: 600px;
+        }
+        .gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+        .luka-magic {
+            color: #1e90ff; /* Blue */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <h2 class="mb-4">Who is your favorite NBA player?</h2>
+    <form method="POST">
+        <input type="text" name="player" class="form-control mb-3" placeholder="Enter player name" required>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    {% if result %}
+        <div class="mt-5">
+            <h4>
+                You are wrong ya sa7by, the best is the king <br>
+                <span class="luka-magic">Luka Magic</span> 👑
+            </h4>
+            <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjNnb2ZlanZuN2J4OGsxaHNvc3FnMTNkZmFwbnBrN2I3dGl0YmNhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/40a7lD1EJK8u29Ebhk/giphy.gif" alt="Luka Doncic GIF" class="gif mt-3">
+        </div>
+    {% endif %}
+</div>
+</body>
+</html>
